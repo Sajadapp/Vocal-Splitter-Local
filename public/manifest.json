@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Vocal Splitter — Local",
+  "version": "0.1.0",
+  "description": "جداسازی محلی صدای خواننده از موسیقی، بدون API و بدون آپلود فایل.",
+  "action": {
+    "default_title": "Vocal Splitter",
+    "default_popup": "popup.html"
+  },
+  "cross_origin_embedder_policy": {
+    "value": "require-corp"
+  },
+  "cross_origin_opener_policy": {
+    "value": "same-origin"
+  },
+  "host_permissions": [
+    "https://huggingface.co/*",
+    "https://*.hf.co/*"
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self'"
+  }
+}

@@ -1,0 +1,7 @@
+node_modules/
+dist/
+*.zip
+*.wav
+*.mp3
+.DS_Store
+Thumbs.db

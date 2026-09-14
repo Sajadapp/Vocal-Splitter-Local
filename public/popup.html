@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>جداکنندهٔ صدای خواننده</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="hero">
+        <div class="brand-mark" aria-hidden="true">♫</div>
+        <div>
+          <p class="eyebrow">پردازش کاملاً محلی</p>
+          <h1>جداکنندهٔ صدای خواننده</h1>
+          <p class="subtitle">بدون API، بدون آپلود، مناسب استفادهٔ شخصی</p>
+        </div>
+      </header>
+
+      <section class="card input-card">
+        <label class="file-drop" id="dropZone" for="audioFile">
+          <span class="upload-icon" aria-hidden="true">↑</span>
+          <span class="drop-title">فایل ترانه را انتخاب کنید</span>
+          <span class="drop-help">MP3، WAV، M4A، OGG و فرمت‌های قابل‌پخش Chrome</span>
+          <input id="audioFile" type="file" accept="audio/*,.mp3,.wav,.m4a,.ogg,.flac" />
+        </label>
+        <div class="file-meta" id="fileMeta" hidden></div>
+      </section>
+
+      <section class="card controls-card">
+        <div class="status-row">
+          <span>وضعیت</span>
+          <strong id="statusText">آماده</strong>
+        </div>
+        <div class="progress-track" aria-label="پیشرفت">
+          <div class="progress-bar" id="progressBar"></div>
+        </div>
+        <p class="status-detail" id="statusDetail">مدل جداسازی در اولین اجرا دانلود می‌شود.</p>
+        <button class="primary-button" id="separateButton" disabled>شروع جداسازی</button>
+        <button class="secondary-button" id="cancelButton" hidden>لغو پردازش</button>
+      </section>
+
+      <section class="card results-card" id="resultsCard" hidden>
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">خروجی آماده است</p>
+            <h2>دانلود فایل‌ها</h2>
+          </div>
+          <span class="quality-pill">WAV</span>
+        </div>
+        <div class="result-list">
+          <div class="result-row">
+            <div>
+              <strong>صدای خواننده</strong>
+              <span>Vocal stem</span>
+            </div>
+            <button class="download-button" data-result="vocals">دانلود</button>
+          </div>
+          <div class="result-row">
+            <div>
+              <strong>موسیقی بی‌کلام</strong>
+              <span>Instrumental stem</span>
+            </div>
+            <button class="download-button" data-result="instrumental">دانلود</button>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer-note">
+        فایل صوتی فقط در مرورگر شما پردازش می‌شود و به سرور ارسال نمی‌گردد.
+      </footer>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>

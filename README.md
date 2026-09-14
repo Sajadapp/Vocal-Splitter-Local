@@ -1,5 +1,7 @@
 # Vocal Splitter — Local Chrome Extension
 
+> 🇮🇷 راهنمای فارسی: [README-FA.md](./README-FA.md)
+
 Separate vocals from music **locally in the browser** with the HTDemucs model. No paid API, no subscription, no audio upload.
 
 - Input via popup, resampled to 44.1 kHz
